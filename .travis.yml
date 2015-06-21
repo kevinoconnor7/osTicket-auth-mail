@@ -1,0 +1,15 @@
+language: php
+php:
+- 5.4
+- 5.5
+- 5.6
+before_script: wget https://raw.githubusercontent.com/osTicket/core-plugins/develop/make.php
+script: php make.php build auth-mail
+deploy:
+  provider: releases
+  api_key:
+    secure: TOL/YPrOBblRvUIsFi9wgs2I9DzzbNLIBpnZceEhWjgNn/UUtgB+h54r/gBsSfa/aMhw1w6jZRI6LO6Nk871YFveeSYtLR7+Uvh/SBapmtuTA2t7AhMYEb3kj0ow1oDXSXVd0urstCt78Wca3VJ3XWUfNktw1dXULwMAI8sxHlSXGHpQUgVWB/rVyou90cm9JFrEUUnwJn4W2SVUEWv1gk82tPZ38iLbYg8qrb7CGbHpGIke+WRyrch97eBX14yy1DxoJbAZQI2veDTpxaFXMVSrUR0vTwgtb5JneC9iSX64Zz5Nk3qulpmvvczZLUYOaYtLh19kDu6Yx4KjhodbzzF5y3PZvQmuHyMykaNQlfS/FINmwIweiPZJvKcpKf7huakiRSjdzoNb12sa4A6xkmmKa2tXTBeqVCUQYWMVdmRCXCSbCB7ja+IUksiPVtvZOPjEVN7Si0+Xar23utXSjr6fkr0S4xZSob2YPj5Ad8CT7oaEjqsQUadGckh24m6WyNR7xT3yyt6HWb6cuyNJOMSbsTkesUMYWy+2XSkUuGab40XFLQi0orngUXLEkDZgS+Vr9oRZF65+tdU3rOWK56JqHpukMYvN4aLMoxQeNRCzwo0Vw5w0RLQ1FZBsKW81/DZL9KYefbzNQ0Nh/fUDD80tH/UY6wK/bxrSXGBtq20=
+  file: auth-mail.phar
+  on:
+    repo: kevinoconnor7/osTicket-auth-mail
+    tags: true
