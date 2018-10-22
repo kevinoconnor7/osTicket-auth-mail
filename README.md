@@ -18,15 +18,18 @@ Download the auth-mail.phar from the [latest release](https://github.com/kevinoc
 and put it in your `includes/plugins` folder. From the admin panel go to
 *Manage* --> *Plugins* --> *Add New Plugin* and select the plugin.
 
-### From source
-
-Follow the instructions to install [core-plugins](https://github.com/osTicket/core-plugins)
-and then clone this repo into your `includes/plugns` folder. Then run
-`php make.php hydrate` again.
-
 Building
 ========
 
-Make sure you have `make.php` from [core-plugins](https://github.com/osTicket/core-plugins)
-and run `php make.php build auth-mail` to generate a phar package. This requires
-that you have `phar.readonly = Off` in your php.ini file.
+Run `make`.
+
+Local Dev Environment
+=====================
+
+Run `docker-compose up -d`. You should have osticket running on `localhost:8080`.
+
+osTicket admin login is user `demo` password `hunter5`. The imap login is `admin@example.com` with password `hunter5!`.
+
+Whenever you want to deploy the plugin run `make deploy-docker`.
+
+The first time uou'll need to sign-in as an agent and add/configure the plugin. The imap server will be running on `imap:993` with SSL enabled.
