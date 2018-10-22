@@ -1,0 +1,31 @@
+version: '3'
+services:
+  osticket:
+    image: campbellsoftwaresolutions/osticket
+    links:
+      - mysql:mysql
+      - imap:imap
+    ports:
+      - 8080:80
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=osticket
+      - MYSQL_PASSWORD=hunter5
+      - MYSQL_DATABASE=osticket
+      - ADMIN_USERNAME=demo
+      - ADMIN_PASSWORD=hunter5
+      - ADMIN_EMAIL=admin@example.com
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_USER=osticket
+      - MYSQL_PASSWORD=hunter5
+      - MYSQL_DATABASE=osticket
+      - MYSQL_ROOT_PASSWORD=hunter5
+  imap:
+    image: antespi/docker-imap-devel
+    environment:
+      - 8443:8443
+      - MAILNAME=example.com
+      - MAIL_ADDRESS=admin@example.com
+      - MAIL_PASS=hunter5!
