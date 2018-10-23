@@ -52,7 +52,7 @@ class MailAuth {
         }
         break;
       case 'client':
-        $user = ClientAccount::lookupByUsername($user);
+        $user = ClientAccount::lookupByUsername($username);
         if ($user && $user->getID()) {
           return new ClientSession(new EndUser($username));
         }
