@@ -10,7 +10,7 @@ deploy:
   provider: releases
   api_key:
     secure: PTGA4b6FU7xnlYfjYKuEnmOE91QL4tgfi0XJgTLyUJJ0RCgPQNGA4yJQvT24QmF2OAk4l2xkHfPjHVYSvUKaFzVp+xCz0OTgQMLz+WxzfNvGgjWJ7IWC2tz4KDjZ27q+i6IFF6sc6HvI2o+TiU1wCDF5349VRYhts4DviLit9hehXRWb9/+2PxvfnWB4P9YMzWqpCs6GPIjHD0AGm0zlSyMN3g9jNwWT4EYa7tgV3pjF8X0M8eFnRiW0wT9+Z2wZzCIiPf3sHriTQUFS72w8FIBtcw7oGnvjmrO0dBT/gGWtUEDY2x68MiLXtX6p2t5AR5GR2xwN686wT8VunfaGl24OuCqDGqAf8SpkO/l9Yt5MKJBlfzEjCcWq59mQQiuuLWSAbGdU9qEhBFVVAoeDlnbEw0tWkTLlcWG8NZ/MQI/pkntn4t4sZdPh+Hn3dWSbDNgEj57zqUD5Z/Upqw7pBZm6Cw8HWxsHR+AIn47UwaO6HT9lXZL3PFtr6s+cLU7Bp89mN7qQ0c6eAsuMKuTwWCGaDte6ydVMLcgLP5Km1kJk2UIlwImKYwS3K3pexQPMwEIX+I/dcYshlNaTG+2e650Mnmd0F9VchyVvjaXhklBxgb3zVEWPcMU4XAwkgrGoFoVaOft6fgthbXBPlJ0e0wGxfF0Jv69oaKmLeIojNOE=
-  file: auth-mail.phar
+  file: build/auth-mail.phar
   skip_cleanup: true
   on:
     repo: kevinoconnor7/osTicket-auth-mail
