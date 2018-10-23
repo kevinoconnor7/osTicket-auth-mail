@@ -1,15 +1,15 @@
 language: php
 php:
-  - 5.4
-  - 5.5
-  - 5.6
-  - 7.0
+- 5.4
+- 5.5
+- 5.6
+- 7.0
 before_script: wget https://raw.githubusercontent.com/osTicket/core-plugins/develop/make.php
 script: make
 deploy:
   provider: releases
   api_key:
-    secure: TOL/YPrOBblRvUIsFi9wgs2I9DzzbNLIBpnZceEhWjgNn/UUtgB+h54r/gBsSfa/aMhw1w6jZRI6LO6Nk871YFveeSYtLR7+Uvh/SBapmtuTA2t7AhMYEb3kj0ow1oDXSXVd0urstCt78Wca3VJ3XWUfNktw1dXULwMAI8sxHlSXGHpQUgVWB/rVyou90cm9JFrEUUnwJn4W2SVUEWv1gk82tPZ38iLbYg8qrb7CGbHpGIke+WRyrch97eBX14yy1DxoJbAZQI2veDTpxaFXMVSrUR0vTwgtb5JneC9iSX64Zz5Nk3qulpmvvczZLUYOaYtLh19kDu6Yx4KjhodbzzF5y3PZvQmuHyMykaNQlfS/FINmwIweiPZJvKcpKf7huakiRSjdzoNb12sa4A6xkmmKa2tXTBeqVCUQYWMVdmRCXCSbCB7ja+IUksiPVtvZOPjEVN7Si0+Xar23utXSjr6fkr0S4xZSob2YPj5Ad8CT7oaEjqsQUadGckh24m6WyNR7xT3yyt6HWb6cuyNJOMSbsTkesUMYWy+2XSkUuGab40XFLQi0orngUXLEkDZgS+Vr9oRZF65+tdU3rOWK56JqHpukMYvN4aLMoxQeNRCzwo0Vw5w0RLQ1FZBsKW81/DZL9KYefbzNQ0Nh/fUDD80tH/UY6wK/bxrSXGBtq20=
+    secure: PTGA4b6FU7xnlYfjYKuEnmOE91QL4tgfi0XJgTLyUJJ0RCgPQNGA4yJQvT24QmF2OAk4l2xkHfPjHVYSvUKaFzVp+xCz0OTgQMLz+WxzfNvGgjWJ7IWC2tz4KDjZ27q+i6IFF6sc6HvI2o+TiU1wCDF5349VRYhts4DviLit9hehXRWb9/+2PxvfnWB4P9YMzWqpCs6GPIjHD0AGm0zlSyMN3g9jNwWT4EYa7tgV3pjF8X0M8eFnRiW0wT9+Z2wZzCIiPf3sHriTQUFS72w8FIBtcw7oGnvjmrO0dBT/gGWtUEDY2x68MiLXtX6p2t5AR5GR2xwN686wT8VunfaGl24OuCqDGqAf8SpkO/l9Yt5MKJBlfzEjCcWq59mQQiuuLWSAbGdU9qEhBFVVAoeDlnbEw0tWkTLlcWG8NZ/MQI/pkntn4t4sZdPh+Hn3dWSbDNgEj57zqUD5Z/Upqw7pBZm6Cw8HWxsHR+AIn47UwaO6HT9lXZL3PFtr6s+cLU7Bp89mN7qQ0c6eAsuMKuTwWCGaDte6ydVMLcgLP5Km1kJk2UIlwImKYwS3K3pexQPMwEIX+I/dcYshlNaTG+2e650Mnmd0F9VchyVvjaXhklBxgb3zVEWPcMU4XAwkgrGoFoVaOft6fgthbXBPlJ0e0wGxfF0Jv69oaKmLeIojNOE=
   file: auth-mail.phar
   on:
     repo: kevinoconnor7/osTicket-auth-mail
