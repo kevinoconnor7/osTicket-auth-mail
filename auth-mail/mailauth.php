@@ -57,7 +57,10 @@ class MailAuth {
           return new ClientSession(new EndUser($username));
         }
         return new ClientCreateRequest(
-            $this, $username, array());
+            $this, $username, array(
+              'email' => $username,
+              'name' => $username,
+            ));
         break;
     }
     return null;
